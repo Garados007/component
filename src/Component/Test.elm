@@ -14,7 +14,7 @@ writing a large boilerplate.
 @docs DebugComponent, Program
 
 # Program
-@docs element, document, application, applicationNoUrl
+@docs element, application, applicationNoUrl
 
 -}
 
@@ -28,8 +28,7 @@ import Url exposing (Url)
 
 -- HELPER TYPES
 
-{-| The internal model alias that is used by `element`, `document`, `application` and
-`applicationNoUrl`.
+{-| The internal model alias that is used by `element`, `application` and `applicationNoUrl`.
 -}
 type alias DebugComponent model event =
     { model: model

@@ -39,7 +39,9 @@ But this approach has some dissadvantages:
 
 ## The host provides some of its messages to call
 
-This approach is commonly used in many elm packages. The host initialize some static object and the initializer provides all required events. After that the static object has everything what the host needs to work with the component.
+This approach is commonly used in many elm packages. The host initialize some static object and the
+initializer provides all required events. After that the static object has everything what the host
+needs to work with the component.
 
 This looks like this:
 
@@ -88,11 +90,12 @@ workload on both sides:
 
 > Spoiler alert: This is the method this library uses.
 
-The `update` method normaly returns two things: one is the new component model and the other
-thing are some commands that needs to be executed on the core runtime. This approach adds a third
-return that express the list of called events. 
+The `update` method normaly returns two things: one is the new component model and the other thing
+are some commands that needs to be executed on the core runtime. This approach adds a third return
+that express the list of called events. 
 
-The events are special messages that are reserved for the host and the host can decide what to do with and can even ignore them.
+The events are special messages that are reserved for the host and the host can decide what to do
+with and can even ignore them.
 
 ```elm
 -- component update
@@ -120,9 +123,13 @@ update msg host =
         ...
 ```
 
-The client doesn't need to do something special. Just return the events like it would to with `Cmd` values.
+The client doesn't need to do something special. Just return the events like it would to with `Cmd`
+values.
 
-The host has an additional task to do after applying the update of its model and transforming the `Cmd` value: It needs to handle the event messages. The handling of the event messages are similar to the normal update: It can change the host model, create `Cmd` values or sometimes new events for the host of the host.
+The host has an additional task to do after applying the update of its model and transforming the
+`Cmd` value: It needs to handle the event messages. The handling of the event messages are similar
+to the normal update: It can change the host model, create `Cmd` values or sometimes new events for
+the host of the host.
 
 This library intends to remove all this complexity and make everything as smooth as possible. 
 
