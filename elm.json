@@ -1,0 +1,24 @@
+{
+    "type": "package",
+    "name": "garados007/component",
+    "summary": "A library with helper functions to create components",
+    "license": "GPL-3.0",
+    "version": "1.0.0",
+    "exposed-modules": [
+        "Component",
+        "Component.Test"
+    ],
+    "source-directories": [
+        "src"
+    ],
+    "elm-version": "0.19.0 <= v < 0.20.0",
+    "dependencies": {
+        "elm/browser": "1.0.0 <= v < 2.0.0",
+        "elm/core": "1.0.0 <= v < 2.0.0",
+        "elm/html": "1.0.0 <= v < 2.0.0",
+        "elm/url": "1.0.0 <= v < 2.0.0",
+        "garados007/triple": "1.0.0 <= v < 2.0.0"
+    },
+    "test-dependencies": {
+    }
+}
